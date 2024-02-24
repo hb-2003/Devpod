@@ -1,0 +1,96 @@
+@import "../../styles/colors.module.scss";
+@import "../../styles/breakpoints.module.scss";
+
+.contactUs {
+  .headContain {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../../assets//contact_us_img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .headLine {
+      color: white;
+      font-size: 50px;
+    }
+  }
+
+  .formContain {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 20px;
+    background-image: url("../../assets/28_bg.png");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 20% auto;
+    padding: 50px 0;
+    .contactUsForm {
+      .titleBox {
+        .title {
+          color: $primary;
+          font-size: 20px;
+        }
+        .SubTitle {
+          font-weight: bold;
+        }
+        margin-bottom: 20px;
+      }
+      width: 45%;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      padding: 50px;
+      border-radius: 20px;
+      .emailPhone {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      .submitBin {
+        background-color: $primary;
+        border: none;
+        margin-top: 20px;
+        width: 100%;
+      }
+    }
+    .contactInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      .iconContainer {
+        background-color: $primary;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        width: 50px;
+        align-items: center;
+        height: 50px;
+        .icon {
+          height: 20px;
+        }
+      }
+      .locationBox {
+        background-color: $secondary;
+      }
+      .mail {
+        background-color: $green-dark;
+      }
+      .address,
+      .location,
+      .email {
+        display: flex;
+        gap: 20px;
+        .description {
+          .title {
+            font-size: 20px;
+          }
+          .value {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
