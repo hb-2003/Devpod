@@ -3,6 +3,10 @@ import styles from "./CoreCrops.module.scss";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import tomato from "../../../assets/Tomato.png";
 import pomegranate from "../../../assets/pomegranate.png";
+import core1 from "../../../assets/slider_1.jpg";
+import core2 from "../../../assets/slider_2.jpg";
+import core3 from "../../../assets/slider_3.jpg";
+import core4 from "../../../assets/slider_4.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -18,25 +22,30 @@ const CoreCrops = () => {
         <Swiper
           className={styles.headerProduct}
           modules={[Navigation, Pagination, Scrollbar, A11y]}
-          spaceBetween={50}
+          spaceBetween={30}
+          loop={true}
           slidesPerView={1}
-          navigation
+          navigation={true}
           pagination={{ clickable: true }}
           scrollbar={{ draggable: true }}
           onSwiper={(swiper) => console.log(swiper)}
           onSlideChange={() => console.log("slide change")}
         >
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+            <img src={core1} alt="core1" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+            <img src={core2} alt="core2" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+            <img src={core3} alt="core3" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src={core4} alt="core4" />
           </SwiperSlide>
         </Swiper>
       </div>
+      
       <h1 style={{ textAlign: "center" }}>Core Crops</h1>
       <div className={styles.coreCropsFruits}>
         <div className={styles.tomatoBox}>

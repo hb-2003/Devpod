@@ -1,8 +1,11 @@
-import Auth from "./pages/Auth";
+import Login from "./pages/Auth/Login";
+import SignUp from "./pages/Auth/SignUp";
+import Blogs from "./pages/Blogs";
 import ContactUs from "./pages/ContactUs";
 import CoreCrops from "./pages/Products/CoreCrops";
-import DryFruits from "./pages/Products/DryFruits";
+// import DryFruits from "./pages/Products/DryFruits";
 import FreshFruits from "./pages/Products/FreshFruits";
+import Services from "./pages/Services";
 import Home from "./pages/home";
 
 const routes = [
@@ -10,6 +13,13 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+    isPrivate: true,
+    layout: "private",
+  },
+  {
+    path: "/services",
+    name: "services",
+    component: Services,
     isPrivate: true,
     layout: "private",
   },
@@ -27,13 +37,13 @@ const routes = [
     isPrivate: true,
     layout: "private",
   },
-  {
-    path: "/products/dry-fruits",
-    name: "dryFruits",
-    component: DryFruits,
-    isPrivate: true,
-    layout: "private",
-  },
+  // {
+  //   path: "/products/dry-fruits",
+  //   name: "dryFruits",
+  //   component: DryFruits,
+  //   isPrivate: true,
+  //   layout: "private",
+  // },
   {
     path: "/products/fresh-fruits",
     name: "freshFruits",
@@ -41,11 +51,24 @@ const routes = [
     isPrivate: true,
     layout: "private",
   },
-
   {
-    path: "/auth",
-    name: "Auth",
-    component: Auth,
+    path: "/blogs",
+    name: "blogs",
+    component: Blogs,
+    isPrivate: true,
+    layout: "private",
+  },
+  {
+    path: "/login",
+    name: "login",
+    component: Login,
+    isPrivate: false,
+    layout: "auth",
+  },
+  {
+    path: "/signup",
+    name: "signup",
+    component: SignUp,
     isPrivate: false,
     layout: "auth",
   },

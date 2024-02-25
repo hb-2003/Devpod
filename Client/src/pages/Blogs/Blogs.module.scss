@@ -1,0 +1,67 @@
+@import "../../styles/colors.module.scss";
+@import "../../styles/breakpoints.module.scss";
+
+.blogs {
+  .headContain {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../../assets//contact_us_img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .headLine {
+      color: white;
+      font-size: 50px;
+      text-decoration: underline;
+    }
+  }
+  .blogContain {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    border-radius: 10px;
+    .blogInfo {
+      width: 70%;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      border-radius: 8px;
+      .blogBox {
+        .blogImg {
+          width: 100%;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+        }
+      }
+      .content {
+        padding: 30px;
+        .meta {
+          img {
+            height: 20px;
+          }
+          display: flex;
+          gap: 20px;
+          color: $primary;
+        }
+        .info {
+          .title {
+            font-size: 30px;
+            padding: 5px 0;
+            &:hover {
+              color: $primary;
+            }
+          }
+          .description {
+          }
+          .readMore {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+}

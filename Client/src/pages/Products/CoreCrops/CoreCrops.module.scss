@@ -5,13 +5,10 @@
   .headerProduct {
     height: 400px;
     width: 100%;
-    // background-image: url("https://assets-global.website-files.com/62551fa7bee8db16e944f95d/63171b602cce7bedd64d2086_Sahyadri%20Farms_Web%20Banner_06-09-2022-01%20\(1\).webp");
-    // background-position: 50%;
-    // background-repeat: no-repeat;
-    // background-size: cover;
     img {
-      vertical-align: middle;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 

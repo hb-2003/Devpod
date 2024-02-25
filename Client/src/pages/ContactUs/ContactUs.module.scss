@@ -15,6 +15,7 @@
     .headLine {
       color: white;
       font-size: 50px;
+      text-decoration: underline;
     }
   }
 
@@ -29,6 +30,10 @@
     background-size: 20% auto;
     padding: 50px 0;
     .contactUsForm {
+      width: 50%;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      padding: 50px;
+      border-radius: 20px;
       .titleBox {
         .title {
           color: $primary;
@@ -39,14 +44,25 @@
         }
         margin-bottom: 20px;
       }
-      width: 45%;
-      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-      padding: 50px;
-      border-radius: 20px;
+      .phone{
+        border: none;
+        height: 50px;
+      }
+      .errorMsg {
+        color: $red;
+      }
       .emailPhone {
         display: flex;
         gap: 20px;
         margin-bottom: 20px;
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        input[type="number"] {
+          -moz-appearance: textfield;
+        }
       }
       .submitBin {
         background-color: $primary;

@@ -1,0 +1,36 @@
+@import "../../../../styles/colors.module.scss";
+@import "../../../../styles/breakpoints.module.scss";
+
+.signInForm {
+  margin-top: 20px;
+  width: 100%;
+
+  .form {
+    width: 100%;
+
+    .inputField {
+      width: 100%;
+    }
+
+    .PasswordField {
+      width: 100%;
+      margin: 20px 0;
+    }
+    .errorMsg {
+      color: $red;
+    }
+
+    .signInBtn {
+      width: 100%;
+    }
+
+    .NavigateSignUp {
+      margin-top: 25px;
+      text-align: center;
+      p {
+        text-transform: capitalize;
+        color: $gray-600;
+      }
+    }
+  }
+}

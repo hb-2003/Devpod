@@ -1,0 +1,43 @@
+@import "../../../../styles/colors.module.scss";
+@import "../../../../styles/breakpoints.module.scss";
+
+.signUpForm {
+  margin-top: 20px;
+  width: 100%;
+  .form {
+    width: 100%;
+    .nameField {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+    .inputField,
+    .PasswordField {
+      width: 100%;
+      margin-top: 20px;
+    }
+    .cPasswordField {
+      margin-bottom: 20px;
+    }
+    .errorMsg {
+      color: $red;
+    }
+    .signUpBtn {
+      width: 100%;
+    }
+    .signUpBtnDisabled {
+      width: 100%;
+      cursor: not-allowed;
+    }
+  }
+  .NavigatingSignIn {
+    margin-top: 25px;
+    text-align: center;
+    p {
+      text-transform: capitalize;
+      color: $gray-600;
+    }
+  }
+}
