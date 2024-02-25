@@ -1,33 +1,30 @@
-const mongodb = require('mongodb');
+const mongoose = require('mongoose');
 
 
-let userSchema = new mongodb.Schema(
+const userSchema = new mongoose.Schema(
     {
         firstName: {
             type: String,
-            required: true,
+            // required: true,
             trim: true
         },
         middelName: {
             type: String,
-            required: true,
+            // required: true,
             trim: true
         },
         lastName: {
             type: String,
-            required: true,
+            // required: true,
             trim: true
         },
         email: {
             type: String,
-            unique: true,
-            required: true,
-            match: [/.+@.+\..+/, "Please enter a valid e-mail address"],
-            trim: true
+            // required: true
         },
         password: {
             type: String,
-            required: true,
+            // required: true,
             validate: [
                 function (password) {
                     return password.length >= 6;
@@ -38,7 +35,7 @@ let userSchema = new mongodb.Schema(
         },
         birthdate: {
             type: Date,
-            required: true,
+            // required: true,
             validate: [
                 function (birthdate) {
                     return birthdate < new Date();
@@ -47,13 +44,14 @@ let userSchema = new mongodb.Schema(
             ]
         },
         mobile: {
-            type: Number,
-            required: true,
-            validate: [
-                function (mobile) {
-                    return mobile.length == 10;
+            type :String,
+        
+            // required: tru
+            validate : [
+                function(mobile){
+                    return mobile.length >= 10;
                 },
-                'Mobile number should be 10 digits long'
+                'Mobile should be longer'
             ]
 
         },
@@ -68,4 +66,4 @@ let userSchema = new mongodb.Schema(
     timestamps: true,
 }
 );
-exports.User = mongodb.model('User', userSchema);
+module.exports = mongoose.model('users', userSchema);

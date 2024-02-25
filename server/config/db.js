@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 // Replace this with your MONGOURI.
 
-const MONGO_URI =  'mongodb://127.0.0.1:27017/DUHacks';
+const MONGO_URI = env.MONGO_URI;
 mongoose.set('strictQuery', false);  
 exports.connect = () => {
     mongoose.connect(MONGO_URI, {
